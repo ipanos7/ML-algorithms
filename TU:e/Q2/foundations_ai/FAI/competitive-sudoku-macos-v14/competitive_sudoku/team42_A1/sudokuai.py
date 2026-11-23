@@ -254,7 +254,7 @@ class SudokuAI(competitive_sudoku.sudokuai.SudokuAI):
                     best_value, best_move = value, (k, v)
                     alpha = max(alpha, value)
 
-            propose(*best_move)   # this depth is fully searched: commit to it
+            propose(*best_move)   
 
             # Search the most promising moves first in the next iteration
             root_moves.sort(key=lambda mv: values[mv], reverse=True)
